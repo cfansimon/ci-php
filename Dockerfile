@@ -2,9 +2,9 @@ FROM hub.c.163.com/library/debian:8.6
 
 MAINTAINER Simon Wood <wq@wuqian.me>
 
-RUN apt-get update
 COPY debian/sources.list /etc/apt/sources.list
-RUN apt-get install -y curl \
+RUN apt-get update \
+    && apt-get install -y curl \
     && curl -O https://www.dotdeb.org/dotdeb.gpg \
     && apt-key add dotdeb.gpg \
     && apt-get update \
