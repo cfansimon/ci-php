@@ -9,4 +9,5 @@ RUN curl -Lo /root/dotdeb.gpg https://www.dotdeb.org/dotdeb.gpg && apt-key add /
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y php7.0-cli php7.0-curl php7.0-mcrypt php7.0-mysqlnd php7.0-gd php7.0-dom \
     && curl -Lo /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-4.8.phar  && chmod +x /usr/local/bin/phpunit \
+    && apt-get install -y git \
     && curl -Lo /usr/local/bin/php-cs-fixer http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar && chmod +x /usr/local/bin/php-cs-fixer
