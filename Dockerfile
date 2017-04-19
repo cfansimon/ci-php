@@ -1,4 +1,4 @@
-FROM hub.c.163.com/library/debian:8.6
+FROM debian:8.6
 
 MAINTAINER Simon Wood <i@wuqian.me>
 
