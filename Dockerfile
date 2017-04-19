@@ -1,8 +1,8 @@
 FROM hub.c.163.com/library/debian:8.6
 
-MAINTAINER Simon Wood <wq@wuqian.me>
+MAINTAINER Simon Wood <i@wuqian.me>
 
-COPY debian/sources.list /etc/apt/sources.list
+#COPY debian/sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y curl
 COPY debian/dotdeb.list /etc/apt/sources.list.d/dotdeb.list
 RUN curl -Lo /root/dotdeb.gpg https://www.dotdeb.org/dotdeb.gpg && apt-key add /root/dotdeb.gpg \
